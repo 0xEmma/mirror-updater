@@ -1,11 +1,11 @@
 FROM ubuntu:22.04
 
-COPY /scripts /scripts
+COPY /clone.sh /clone.sh
 
-RUN chmod +x /scripts/*.sh
+RUN chmod +x /clone.sh
 
 RUN apt update
 
 RUN apt install -y rsync
 
-CMD sleep 50
+CMD ./clone.sh

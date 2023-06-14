@@ -27,7 +27,7 @@
 # lot of traffic.
 
 # Directory where the repo is stored locally. Example: /srv/repo
-target="/ext/mirror/arch"
+target=$TARGET
 
 # Lockfile path
 lock="/var/lock/syncrepo.lck"
@@ -42,12 +42,12 @@ bwlimit=0
 # rsync://rsync.archlinux.org/ftp_tier1
 # Otherwise chose a tier 1 mirror from this list and use its rsync URL:
 # https://www.archlinux.org/mirrors/
-source_url='rsync://mirrors.lug.mtu.edu/archlinux/'
+source_url=$SOURCE
 
 # An HTTP(S) URL pointing to the 'lastupdate' file on your chosen mirror.
 # If you are a tier 1 mirror use: https://rsync.archlinux.org/lastupdate
 # Otherwise use the HTTP(S) URL from your chosen mirror.
-lastupdate_url='https://mirrors.lug.mtu.edu/archlinux/lastupdate'
+lastupdate_url=$LASTUPDATE
 
 #### END CONFIG
 

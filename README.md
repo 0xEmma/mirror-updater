@@ -19,8 +19,13 @@ spec:
           - name: mirror-arch
             image: ghcr.io/0xemma/mirror-updater:main
             imagePullPolicy: Always
-            command:
-              - /arch-clone.sh
+            enviorment:
+              - name: TARGET
+                value: /ext/media/arch
+              - name: SOURCE
+                value: rsync://mirrors.lug.mtu.edu/archlinux/
+              - name: LASTUPDATE
+                value: https://mirrors.lug.mtu.edu/archlinux/lastupdate
             volumeMounts:
             - name:  mirror-pvc
               mountPath:  /ext/mirror
