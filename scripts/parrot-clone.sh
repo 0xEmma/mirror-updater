@@ -27,27 +27,27 @@
 # lot of traffic.
 
 # Directory where the repo is stored locally. Example: /srv/repo
-target="/ext/mirror/arch"
+target="/ext/mirror/parrot"
 
 # Lockfile path
-lock="/var/lock/syncrepo.lck"
+lock="/var/lock/syncrepo-parrot.lck"
 
 # If you want to limit the bandwidth used by rsync set this.
 # Use 0 to disable the limit.
 # The default unit is KiB (see man rsync /--bwlimit for more)
-bwlimit=10M
+bwlimit=0
 
 # The source URL of the mirror you want to sync from.
 # If you are a tier 1 mirror use rsync.archlinux.org, for example like this:
 # rsync://rsync.archlinux.org/ftp_tier1
 # Otherwise chose a tier 1 mirror from this list and use its rsync URL:
 # https://www.archlinux.org/mirrors/
-source_url='rsync://mirrors.lug.mtu.edu/archlinux/'
+source_url='rsync://rsync.parrot.sh:/parrot'
 
 # An HTTP(S) URL pointing to the 'lastupdate' file on your chosen mirror.
 # If you are a tier 1 mirror use: https://rsync.archlinux.org/lastupdate
 # Otherwise use the HTTP(S) URL from your chosen mirror.
-lastupdate_url='https://mirrors.lug.mtu.edu/archlinux/lastupdate'
+lastupdate_url='http://rsync.parrot.sh/parrot/last-update.txt'
 
 #### END CONFIG
 

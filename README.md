@@ -1,7 +1,8 @@
 # mirror-updater
 
-Cronjob container to update mirrors in k8s
+Container that updates mirrors
 Example:
+
 ```yaml
 apiVersion: batch/v1
 kind: CronJob
