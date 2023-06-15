@@ -63,7 +63,7 @@ find "${target}" -name '.~tmp~' -exec rm -r {} +
 
 rsync_cmd() {
 	local -a cmd=(rsync -rlptH --safe-links --delete-delay --delay-updates
-		"--timeout=600" "--contimeout=60" --no-motd)
+		"--timeout=600" "--contimeout=60" --no-motd --partial)
 
 	cmd+=(-h -v --progress)
 
