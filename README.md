@@ -26,6 +26,9 @@ spec:
                 value: rsync://mirrors.lug.mtu.edu/archlinux/
               - name: LASTUPDATE
                 value: https://mirrors.lug.mtu.edu/archlinux/lastupdate
+                #if set to first it wont wait until finish to add files/sync, + allows use of partial files, good if it breaks midway aaaaaaaa
+              - name: FIRST
+                value: "first"
             volumeMounts:
             - name:  mirror-pvc
               mountPath:  /ext/mirror
